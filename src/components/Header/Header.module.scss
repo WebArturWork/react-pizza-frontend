@@ -17,7 +17,8 @@
     min-width: 100px;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
     border: 1px solid transparent;
 
     &__cart {
@@ -35,7 +36,6 @@
     &:hover {
       background-color: darken(#fe5f1e, 8%);
     }
-
   }
 
   &__cart {
@@ -60,9 +60,45 @@
     }
   }
   @media (max-width: 425px) {
+    &__logo img {
+      width: 24px;
+    }
+    h1 {
+      font-size: 18px;
+    }
     &__text {
       p {
         display: none;
+      }
+    }
+  }
+  @media (max-width: 425px) {
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .header {
+    position: fixed;
+    backdrop-filter: blur(3px);
+    background: #ffffffc4;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 20px 10px;
+    .button {
+      border-radius: 20px;
+      padding: 6px 20px;
+      &__cart {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      &__cart span {
+        color: #f9f9f9;
+        font-size: 18px;
+        font-weight: 600;
       }
     }
   }
